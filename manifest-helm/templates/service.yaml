@@ -4,7 +4,7 @@ metadata:
   name: vue-app-service
 spec:
   selector:
-    app: vue-app
+    app: {{ .Values.app.name }}
   ports:
     - protocol: TCP
       port: 80

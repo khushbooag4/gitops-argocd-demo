@@ -1,15 +1,17 @@
-replicaCount: 1
+replicaCount: 12
+app:
+  name: vue-app
 
 container:
   name: vue-container
-  image: docker.io/khushbooag4/argocd-repo:latest
-  
+  ports:
+    - containerPort: 80
 
 image:
-  repository: nginx
+  repository: docker.io/khushbooag4/argocd-repo:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
