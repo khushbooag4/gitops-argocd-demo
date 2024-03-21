@@ -1,4 +1,4 @@
-replicaCount: 12
+replicaCount: 5
 app:
   name: vue-app
 
