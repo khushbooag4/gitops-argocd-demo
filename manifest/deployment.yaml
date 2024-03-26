@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
  name: vue-app
 spec:
- replicas: 8
+ replicas: 10
  selector:
    matchLabels:
      app: vue-app
@@ -14,6 +14,6 @@ spec:
    spec:
      containers:
      - name: vue-container
-       image: docker.io/khushbooag4/argocd-repo:latest
+       image: docker.io/khushbooag4/argocd-repo:v2
        ports:
        - containerPort: 80
