@@ -8,10 +8,9 @@ container:
     - containerPort: 80
 
 image:
-  repository: docker.io/khushbooag4/argocd-repo:v2
+  repository: docker.io/khushbooag4/argocd-repo:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  # tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
