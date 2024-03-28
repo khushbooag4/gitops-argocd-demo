@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    meta.helm.sh/release-name: prometheus
+  labels:
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+  name: kubernetes-apps
+spec:
+  groups:
+  - name: kubernetes-apps
+    rules:
+    - alert: ArgoApplicationOutofSync
+      expr: argocd_app_info{sync_status = "OutOfSync"} == 1
+      for: 1m
+      labels: 
+        severity: warning
+      annotations:
+        summary: "'{{ $labels.name }}' Application has synchronization issue"
