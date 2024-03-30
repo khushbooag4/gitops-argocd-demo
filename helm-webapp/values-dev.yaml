@@ -1,5 +1,5 @@
 appName: vue-app
-replicas: 3
+replicas: 4
 
 port: 80
 
