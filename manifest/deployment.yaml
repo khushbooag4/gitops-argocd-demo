@@ -17,3 +17,10 @@ spec:
        image: docker.io/khushbooag4/argocd-repo:v2
        ports:
        - containerPort: 80
+       resources:
+         requests:
+            memory: "16Mi" 
+            cpu: "0.5"    
+         limits:
+            memory: "128Mi"
+            cpu: "1"
