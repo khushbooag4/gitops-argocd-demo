@@ -10,4 +10,4 @@ configmap:
 
 image:
   name: docker.io/khushbooag4/argocd-repo
-  tag: latest
+  tag: v2
